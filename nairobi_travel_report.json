@@ -1,0 +1,18 @@
+{
+  "weather": {
+    "city": "Nairobi",
+    "country_code": "KE",
+    "temperature_c": 16.62,
+    "condition": "overcast clouds",
+    "humidity_percent": 82,
+    "wind_speed_m_s": 3.6
+  },
+  "country": {
+    "name": "Kenya",
+    "region": "Africa",
+    "population": 54227015,
+    "currencies": [
+      "Kenyan shilling"
+    ]
+  }
+}
