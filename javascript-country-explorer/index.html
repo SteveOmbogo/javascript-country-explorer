@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Weather Explorer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #eff6ff;
+            color: #1e293b;
+            margin: 0;
+            padding: 40px 16px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 28px;
+            background: white;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px #00000012;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d4ed8;
+        }
+
+        .search {
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            flex: 1;
+            min-width: 0;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 18px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
+        #status {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .error {
+            color: #b91c1c;
+        }
+
+        .weather-card {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 10px;
+        }
+
+        .temperature {
+            font-size: 42px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .detail {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Live Weather Explorer</h1>
+
+        <p>Enter a city to check its current weather.</p>
+
+        <form id="search-form" class="search">
+            <input
+                type="text"
+                id="city-input"
+                placeholder="e.g. Nairobi"
+                value="Nairobi"
+                required
+            >
+
+            <button type="submit" id="search-button">
+                Search
+            </button>
+        </form>
+
+        <div id="status" role="status" aria-live="polite">
+            Ready to search.
+        </div>
+
+        <section id="weather-result"></section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
